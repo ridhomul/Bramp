@@ -25,7 +25,7 @@ FirebaseConfig config;
 #define LOADCELL_SCK  5
 
 HX711 scale;
-float calibration_factor = 2280.0;  
+float calibration_factor = 1080.0;  
 
 unsigned long sendDataPrevMillis = 0;
 bool signupOK = false;
