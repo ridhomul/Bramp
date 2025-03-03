@@ -25,7 +25,7 @@ FirebaseConfig config;
 #define LOADCELL_SCK  5
 
 HX711 scale;
-float calibration_factor = 2280.0;  // Sesuaikan berdasarkan hasil kalibrasi
+float calibration_factor = 2280.0;  
 
 unsigned long sendDataPrevMillis = 0;
 bool signupOK = false;
@@ -82,7 +82,7 @@ void loop() {
 
     // Baca berat dari load cell
     float weight = scale.get_units(10);
-    if (abs(weight) < 5) weight = 0;  // Abaikan noise kecil
+    if (abs(weight) < 5) weight = 0;  
 
     // Tetapkan ambang batas berat buku
     const float MIN_BOOK_WEIGHT = 20.0;   // Berat minimum buku (dalam gram)
